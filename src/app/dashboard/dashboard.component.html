@@ -1,1 +1,36 @@
-<p>dashboard works!</p>
+<app-navbar></app-navbar>
+<div class="container-fluid" *ngIf="user$ | async as user">
+  <div class="container">
+    <div class="row">
+
+      <!-- PROFILE & RANKING COMPONENT -->
+      <div class="col-3 p-2 bg-section">
+
+        <ng-container *ngIf="user.displayName === null; else showDisplayName">
+          <app-profile [userName]="'Usuario'"></app-profile>
+        </ng-container>
+
+        <ng-template #showDisplayName>
+          <app-profile [userName]="user.displayName"></app-profile>
+        </ng-template>
+
+
+        <app-ranking></app-ranking>
+      </div>
+
+      <!-- TOOLS & POST WALL'S COMPONENT -->
+      <div class="col-6 p-2 bg-section">
+        <app-tools></app-tools>
+        <app-wall></app-wall>
+      </div>
+
+      <!-- ADVERTISING & MARKETING -->
+      <div class="col-3 p-2 text-center" style="background-color: lightblue">
+        <h5>Columna</h5>
+        <h5>para</h5>
+        <h5>Publicidad</h5>
+      </div>
+
+    </div>
+  </div>
+</div>

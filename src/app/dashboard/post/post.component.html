@@ -1,0 +1,62 @@
+<div class="wrapper p-3">
+
+  <!-- HEADER -->
+  <div class="row pb-2">
+    <div class="col-1">
+      <img src="../../../assets/images/profile/user.svg" alt="avatar" class="user-avatar">
+    </div>
+    <div class="col-11">
+      <h6 class="user-name">{{ userName }}</h6>
+      <p class="user-data">{{ cargo }}</p>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="row">
+    <div class="col-12">
+
+      <ng-template [ngIf]="postContent !== ''">
+        <p>Contenido: {{ postContent }}</p>
+      </ng-template>
+
+      <ng-template [ngIf]="linkVideo !== ''">
+
+        <youtube-player
+          videoId="{{ linkVideo }}"
+          suggestedQuality="highres"
+          [height]="250"
+          [width]="450"
+          [startSeconds]="43"
+          [endSeconds]="60">
+        </youtube-player>
+
+      </ng-template>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- TOOLS -->
+  <div class="row">
+    <div class="col-3 text-center">
+      <a class="text-tool" routerLink="#">
+        <img src="../../../assets/images/post/like.svg" alt="" class="img-tool">
+        Apoyar
+      </a>
+    </div>
+    <div class="col-3 text-center">
+      <a class="text-tool" routerLink="#">
+        <img src="../../../assets/images/post/comment.svg" alt="" class="img-tool">
+        Comentar
+      </a>
+    </div>
+    <div class="col-3 text-center">
+      <a class="text-tool" routerLink="#">
+        <img src="../../../assets/images/post/share.svg" alt="" class="img-tool">
+        Compartir
+      </a>
+    </div>
+  </div>
+
+</div>
