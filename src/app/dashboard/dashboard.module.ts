@@ -11,6 +11,9 @@ import {ToolsComponent} from './tools/tools.component';
 import {PostComponent} from './post/post.component';
 import {YouTubePlayerModule} from "@angular/youtube-player";
 import { AdvertisingComponent } from './advertising/advertising.component';
+import { ModalPostComponent } from './modals/modal-post/modal-post.component';
+import { ModalRepoComponent } from './modals/modal-repo/modal-repo.component';
+import { ModalIllustrationComponent } from './modals/modal-illustration/modal-illustration.component';
 
 
 @NgModule({
@@ -23,6 +26,9 @@ import { AdvertisingComponent } from './advertising/advertising.component';
     ToolsComponent,
     PostComponent,
     AdvertisingComponent,
+    ModalPostComponent,
+    ModalRepoComponent,
+    ModalIllustrationComponent,
 
   ],
   imports: [

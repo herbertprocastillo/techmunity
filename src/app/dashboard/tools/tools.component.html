@@ -1,59 +1,47 @@
 <div class="wrapper p-3">
 
 	<div class="row">
+
 		<div class="col-1">
-			<img src="../../../assets/images/profile/user.svg" alt="avatar" class="img-avatar">
+			<img src="{{ user.photoURL }}" alt="" class="img-avatar">
 		</div>
+
 		<div class="col-11">
-			<!-- Button trigger modal - POST -->
+			<!-- POST TOOL -->
+			<!-- Button trigger - POST -->
 			<button type="button" class="btn btn-sm btn-post" data-bs-toggle="modal" data-bs-target="#modalPOST">Crear
 				publicación
 			</button>
-
 			<!-- Modal - POST -->
-			<div class="modal fade" id="modalPOST" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Crear una publicación</h5>
-							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						</div>
-						<div class="modal-body">
-							<p>¿Sobre qué quieres hablar?</p>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-							<button type="button" class="btn btn-primary">Publicar</button>
-						</div>
-					</div>
-				</div>
-			</div>
-
-
+			<app-modal-post [user]="user"></app-modal-post>
 		</div>
 	</div>
 
 	<div class="row mt-3">
 
 		<div class="col-3">
-			<img src="../../../assets/images/wall/attachment.svg" alt="" class="img-tool">
-			<a class="text-tool" routerLink="#">Compartir</a>
+			<!-- REPO TOOL -->
+			<!-- Button trigger - REPO -->
+			<a type="button" class="text-tool" data-bs-toggle="modal" data-bs-target="#modalREPO">
+				<img src="../../../assets/images/wall/repo.svg" alt="" class="img-tool">
+				Repositorio
+			</a>
+			<!-- Modal - REPO -->
+			<app-modal-repo></app-modal-repo>
 		</div>
 
 		<div class="col-3">
-			<img src="../../../assets/images/wall/post.svg" alt="" class="img-tool">
-			<a class="text-tool" routerLink="#">Post</a>
+			<!-- ILLUSTRATION TOOL -->
+			<!-- Button trigger - ILLUSTRATION -->
+			<a type="button" class="text-tool" data-bs-toggle="modal" data-bs-target="#modalILLUSTRATION">
+				<img src="../../../assets/images/wall/illustration.svg" alt="" class="img-tool">
+				Ilustración
+			</a>
+			<!-- Modal - ILLUSTRATION -->
+			<app-modal-illustration></app-modal-illustration>
 		</div>
 
-		<div class="col-3">
-			<img src="../../../assets/images/wall/question.svg" alt="" class="img-tool">
-			<a class="text-tool" routerLink="#">Consultar</a>
-		</div>
 
-		<div class="col-3">
-			<img src="../../../assets/images/wall/helping-hand.svg" alt="" class="img-tool">
-			<a class="text-tool" routerLink="#">Pedir Ayuda</a>
-		</div>
 
 	</div>
 
