@@ -10,9 +10,9 @@ export class WallComponent implements OnInit {
   listPost = [
     {
       userName: 'Herbert Pro Castillo',
-      postContent: 'primer post con contenido ramdom',
+      postContent: 'Curso de Angular Gratis!',
       cargo: 'Desarrollador Frontend',
-      linkVideo:'5qtlCOBKQvc'
+      linkVideo:'1x9Yy6Vp0tg'
     },
     {
       userName: 'Vanessa Valle Miranda',

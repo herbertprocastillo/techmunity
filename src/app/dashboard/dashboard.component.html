@@ -1,5 +1,6 @@
+<app-navbar></app-navbar>
 <div class="container-fluid" *ngIf="user$ | async as user">
-  <app-navbar></app-navbar>
+
   <div class="container">
     <div class="row">
 
@@ -25,10 +26,8 @@
       </div>
 
       <!-- ADVERTISING & MARKETING -->
-      <div class="col-3 p-2 text-center" style="background-color: lightblue">
-        <h5>Columna</h5>
-        <h5>para</h5>
-        <h5>Publicidad</h5>
+      <div class="col-3 p-2">
+        <app-advertising></app-advertising>
       </div>
 
     </div>

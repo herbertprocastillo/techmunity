@@ -10,6 +10,7 @@ import {WallComponent} from './wall/wall.component';
 import {ToolsComponent} from './tools/tools.component';
 import {PostComponent} from './post/post.component';
 import {YouTubePlayerModule} from "@angular/youtube-player";
+import { AdvertisingComponent } from './advertising/advertising.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import {YouTubePlayerModule} from "@angular/youtube-player";
     WallComponent,
     ToolsComponent,
     PostComponent,
+    AdvertisingComponent,
 
   ],
   imports: [
