@@ -1,10 +1,13 @@
-export type Categories = 'VIDEO' | 'REQUEST' | 'REPO';
+//export type Categories = 'VIDEO' | 'REQUEST' | 'REPO';
 
 export interface Post {
-  postId: string;
+  id?: string;
   ownerId: string;
+  ownerName: string;
+  ownerPhotoUrl:string;
   content?: string;
-  category?: Categories;
+  visibility?:string;
+  //category?: Categories;
   edited: boolean;
   shares?: [{
     uid: string, displayName: string, photoURL: string, destiny: string

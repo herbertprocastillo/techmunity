@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-wall',
@@ -7,22 +8,9 @@ import {Component, OnInit} from '@angular/core';
 })
 export class WallComponent implements OnInit {
 
-  listPost = [
-    {
-      userName: 'Herbert Pro Castillo',
-      postContent: 'Curso de Angular Gratis!',
-      cargo: 'Desarrollador Frontend',
-      linkVideo:'1x9Yy6Vp0tg'
-    },
-    {
-      userName: 'Vanessa Valle Miranda',
-      postContent: 'segundo post con contenido ramdom',
-      cargo:'Jefe Area legal',
-      linkVideo:''
-    },
-  ]
+  post$  = this.postSvc.posts;
 
-  constructor() {
+  constructor(private postSvc: PostService) {
   }
 
   ngOnInit(): void {

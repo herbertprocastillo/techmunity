@@ -4,15 +4,15 @@
     <div class="col-12">
 
       <!-- WALL // LIST POSTS -->
-      <ul class="list">
+      <ul class="list" *ngIf="post$ | async as posts">
 
         <!-- POST -->
-        <li class="post mb-2" *ngFor="let post of listPost">
+        <li class="post mb-2" *ngFor="let post of posts">
           <app-post
-            [userName]="post.userName"
-            [postContent]="post.postContent"
-            [cargo]="post.cargo"
-            [linkVideo]="post.linkVideo"
+            [userName]=""
+            [postContent]="post.content"
+            [cargo]=""
+            [linkVideo]=""
           >
           </app-post>
         </li>

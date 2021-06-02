@@ -2,6 +2,9 @@
     width: 35px;
     border-radius: 50%;
 }
+.img-tool {
+    width: 25px;
+}
 .contentBox {
     border: none;
     background-color: transparent;
@@ -9,10 +12,18 @@
     outline: none;
     height: 100px;
 }
-.visibility{
+.visibility {
     border-radius: 20px;
 }
-.btn-form{
+.btn-form {
     border-radius: 20px;
     padding: 5px 20px 5px 20px;
+}
+.btn-tool {
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+}
+.btn-tool:hover {
+    background-color: rgb(240, 240, 240);
 }
