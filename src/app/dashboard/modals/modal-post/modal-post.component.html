@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSave()" [formGroup]="postForm">
+<form (ngSubmit)="onSave(user.uid, user.displayName, user.photoURL)" [formGroup]="postForm">
     <div class="modal fade" id="modalPOST" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -13,7 +13,7 @@
                         </div>
                         <div class="col-7 pt-1">
                             <h6>{{ user.displayName }}</h6>
-                                </div>
+                        </div>
                         <div class="col-4">
                             <div class="form-group">
                                 <select class="form-select form-select-sm visibility" formControlName="visibility">
@@ -27,17 +27,8 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group">
-                                <input type="text" formControlName="ownerId" value="{{ user.uid }}">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" formControlName="ownerName" value="{{ user.displayName }}">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" formControlName="ownerPhotoUrl" value="{{ user.photoURL }}">
-                            </div>
-                            <div class="form-group">
                                 <textarea class="form-control contentBox" placeholder="¿Sobre qué quieres hablar?"
-                                    formControlName="content"></textarea>
+                                          formControlName="content"></textarea>
                             </div>
                         </div>
                     </div>
@@ -45,15 +36,15 @@
                 <div class="modal-footer">
 
                     <button type="button" class="btn btn-tool" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Añadir una foto">
+                            title="Añadir una foto">
                         <img src="../../../../assets/images/post/image.svg" alt="" class="img-tool">
                     </button>
                     <button type="button" class="btn btn-tool" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Añadir un video">
+                            title="Añadir un video">
                         <img src="../../../../assets/images/post/video.svg" alt="" class="img-tool">
                     </button>
                     <button type="button" class="btn btn-tool" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Añadir un documento">
+                            title="Añadir un documento">
                         <img src="../../../../assets/images/post/document.svg" alt="" class="img-tool">
                     </button>
                     <button type="button" class="btn btn-secondary btn-form" data-bs-dismiss="modal">
